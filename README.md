@@ -10,7 +10,7 @@ The application is based on PSR complient libraries and Vue Js frontend technolo
 1. "composer install" from the project root
 2. provide local environmental variables in .env file for your local mysql database connection
 3. create new database in your local host. Just import file "databases.sql" into your local mysql server
-5. run "php -S localhost:8080 -t public/" in project root and visit "localhost:8080/all"
+5. run "php -S localhost:8080 -t public/" in project root and visit "localhost:8080"
 
 ## Project structure
 The main folder "src" contains core classes that build the logic and behavior of the app. 
