@@ -43,7 +43,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript">var scheme="http"</script>
+    <script type="text/javascript">var scheme="<?php echo (!empty($_SERVER['HTTPS']))? 'https':'http'?>"</script>
     <script type="text/javascript">var baseUrl="<?=$_SERVER['HTTP_HOST'];?>"</script>
 
     <!-- Axios -->

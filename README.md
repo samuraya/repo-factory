@@ -1,6 +1,6 @@
 # Repository Factory
 
-## Demo app is here: https://order-shirt-app.herokuapp.com/all
+## Demo app is here: https://repo-factory.herokuapp.com/
 
 ## Introduction
 This is a solution to the web developer position test posted at EnvyBox company.
