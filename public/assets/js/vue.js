@@ -23,8 +23,8 @@ new Vue({
             console.log('checking for a valid name: ' + valid);
             return valid;
         },
-        isValidPhone: function () { // TODO is a@b a valid phone?
-            var valid = this.phone.indexOf('@') > 0;
+        isValidPhone: function () { // 
+            var valid = this.phone == parseInt(this.phone, 10);
             console.log('checking for a valid phone: ' + valid);
             return valid;
         },
