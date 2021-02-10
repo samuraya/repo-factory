@@ -1,0 +1,48 @@
+<div style="width:50%;" class="container">
+        <h2 class="text-center">Обратная связь</h2>
+        
+        <form id="contact_form"  v-on:submit.prevent="submitForm" action="">
+
+
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                
+                <input v-model="name" v-on:blur="isValidName" class="form-control" name="name" type="text" />
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input v-model="phone" v-on:blur="isValidPhone" class="form-control" name="phone" type="tel" />
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение <small>(<span>{{ message.length }}</span> / <span>{{ maxLength }}</span>)</label>
+                <textarea v-model="message" v-on:blur="isValidMessage" class="form-control" name="message"></textarea>
+            </div>
+           
+            <p class="alert alert-warning" v-show="errorMessage.length > 0" v-html="errorMessage"></p>
+
+            <p 
+                v-if="serverErrorMessage"
+                class="alert alert-warning"
+            >{{serverErrorMessage}}</p>
+            <p 
+                v-if="result"
+                class="alert alert-success"
+            >{{result}}</p>
+            <div class="form-group">
+            <label for="name">Куда сохранить сообщение (демо приложения)</label>
+                
+                    <select 
+                        v-model="selected"
+                        name="repo" class="selectpicker form-control">
+                        <option 
+                            v-for="option in options"
+                            v-bind:value="option.name"
+                        >{{ option.text }}</option>
+                        
+                    </select>
+            </div>
+                
+            <button type="submit" class="btn btn-primary">Send</button>
+            
+        </form>
+</div>
